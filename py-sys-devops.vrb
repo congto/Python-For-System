@@ -1,0 +1,28 @@
+\frametitle{Công cụ khuyến cáo}
+\begin{block}{Sử dụng Notepad++ \& VIM}
+\begin{itemize}
+\item Miễn phí và nhẹ.
+\item Có hỗ trợ plugin cho Python.
+\item Phím tắt và "gợi ý" từ khóa.
+\end{itemize}
+\end{block}
+\sFontvi
+\begin{block}{Cấu hình phím tắt cho Notepad++(WINDOWS)}
+Tạo file bat với nội dung sau:
+\begin{verbatim}
+@ECHO OFF
+C:\Python27\python "%1"
+echo.
+PAUSE
+@ECHO ON
+\end{verbatim}
+Lưu thành file với tên là python.bat
+\noindent
+\begin{verbatim}
+  C:\Python27\python.bat
+\end{verbatim}
+Khai báo phím tắt trong Notepad++
+\begin{verbatim}
+C:\Python27\python.bat "$(FULL_CURRENT_PATH)"
+\end{verbatim}
+\end{block}
