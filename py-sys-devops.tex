@@ -31,20 +31,20 @@
 %Thiết lập chế độ full màn hình khi mở slide
 \hypersetup{pdfpagemode=FullScreen,
  bookmarks=false,unicode,bookmarksopen=false,unicode}
-\title[Python \& công việc]{PYTHON \\ System / Network Administrator \\ DevOps}
+\title[Python \& Sysadmin V1.0]{PYTHON \\ System / Network Administrator \\ DevOps}
 \subtitle[PYTHONVIETNAM]{"Khơi dậy đam mê"}
-%\author[tu0ng$\_$c0ng]{TÔ THÀNH CÔNG}
-\author[Draft Version]{TÔ THÀNH CÔNG}
+\author[tu0ng$\_$c0ng]{TÔ THÀNH CÔNG}
+%\author[congtt]{TÔ THÀNH CÔNG}
 \institute[PYTHONVIETNAM.INFO]{
 \label{Chu y tai lieu commnet 1}
-  %Phòng Giải pháp \& Nghiên cứu phát triển\\
-  %Trung tâm công nghệ thông tin $@$ VDC \\
-  %http://vdc-it.vn\\[1ex]
+  Phòng Giải pháp \& Nghiên cứu phát triển\\
+  Trung tâm công nghệ thông tin $@$ VDC \\
+  http://vdc-it.vn\\[1ex]
   \texttt{tcvn1985@gmail.com}
 }
 %Tao tai lieu ngay 30.04.2014
-\date{30.04.2014}
-%\date{\today}
+%\date{30.04.2014}
+\date{\today}
 %Tạo ra đính lý và đánh số
 \newtheorem{loihay}{Lời hay } 
 \newtheorem{vidu}{Ví dụ}
@@ -102,15 +102,15 @@ commentstyle= {\color{gray}}		%Dinh nghia mau cho comment
 %--- the presentation begin here -----------------%
 \label{Slide: Noi dung}
 \begin{frame}{0. Nội dung}
-	\begin{enumerate}
+\begin{enumerate}
  	 	\item Giới thiệu bản thân !
   		\item Khi bạn nói ... mọi người nghĩ ...
   		%\item Tôi đã học gì và học như nào.
-  		\item Python dành cho Network/System Administrator / DevOps ..
+  		\item Python \& Network/System Administrator/DevOps ..
   		\item Một số chương trình demo.
   		\item Tài nguyên \& tham khảo.
   		\item Trao đổi \& Thảo luận
-  	\end{enumerate}  
+  	\end{enumerate}
 \end{frame}
 %---Gioi thieu ve tac gia--------------------%
 \label{Who}
@@ -133,9 +133,9 @@ Tương lai: \Large{\textcolor{red}{\textbf{{OpenStack ... OpenStack ... OpenSta
 %---Gioi thieu ve nghe quan tri he thon-------------------%
 \label{Khi toi noi}
 \begin{frame}{2. Khi bạn nói ... mọi người nghĩ ...}
-System Administrator / Network Administrator / System Monitor \\
-Programmer / Coder / Tester / QA  \\
-\textbf{DevOps ....}
+\large{System Administrator / Network Administrator / System Monitor \\
+Programmer / PM (Project Manager) / Tester / QA (Quality Assurance)  \\
+\textbf{DevOps ....}} \\ 
 \framebreak
 \pause
 \begin{figure}[!ht]
@@ -143,19 +143,19 @@ Programmer / Coder / Tester / QA  \\
 	\unitlength1cm
 			\includegraphics[scale=0.5]{khibannoi}
 \end{figure}
-.......
-
+\pause
+\textcolor{orange}{\textit{Đừng quan tâm đến việc mọi người nghĩ mà hãy nghĩ về việc mình làm}}
 %.......
 \end{frame}
 %---Cong viec cua quan tri he thong--------------------------%
 \label{Python & Cong viec}
 \begin{frame}
-\frametitle{3. Công việc của người quản trị hệ thống/mạng}
+\frametitle{3. Công việc về hệ thống/mạng}
 \pause Triển khai \pause / Vận hành \pause / Hỗ trợ \pause / Sao lưu \& bảo trì \pause / Nâng cấp \& cập nhật ...\\
 %..........
 \pause
 \center{"NO-NAME(VIỆC KHÔNG TÊN)"}
-\label{Chu y tai lieu commnet 3}
+\label{Chu y tai lieu commnent}
 \framebreak
 \pause
 \begin{figure}[!ht]
@@ -330,6 +330,47 @@ print "Tong thoi gian Scan la:", total
 \end{block}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------Cau hinh router -------%
+\label{Cau hinh cho route}
+\begin{frame}[fragile] 
+\frametitle{"Đề-Mô" (3)}
+\begin{block}{Cấu hình cho Router} \label{Cau hinh cho Router}
+\Fontvi
+\begin{verbatim}
+R2#sh run
+!
+hostname R2
+!
+aaa new-model
+!
+aaa authentication login VTY enable
+!
+username cong password 0 123
+!
+interface FastEthernet0/0
+!
+interface FastEthernet0/1
+ ip address 10.10.10.2 255.255.255.0
+!
+line vty 0 4
+ privilege level 15
+ password cisco
+ login authentication vty
+!
+end
+\end{verbatim}
+\end{block}
+\end{frame}
+%------Demo telnet va backup router -------%
+\label{Demo: Telnet backup router}
+\begin{frame}[fragile] 
+\frametitle{"Đề-Mô"(4)}
+\begin{block}{Mã nguồn: Telnet \& backup cấu hình Router} \label{Ma nguon telnet  backup router1}
+\Fontvi
+\pythonexternal{vidu-telnet-backup-router.py}
+\end{block}
+\end{frame}
+
 %------Gioi thieu ve ipython-------%
 \label{Slide 4:Python cho Sysad - ipython}
 \begin{frame}[fragile] \label{Gioi thieu ipython}
@@ -514,6 +555,7 @@ Khai báo phím tắt trong Notepad++
 	\begin{itemize}
 		\item Email: tcvn1985@gmail.com
 		\item Twitter: http://twitter.com/tothanhcong
+		\item Skype: tu0ng$\_$c0ng
 		%\item Phone: 0912349490
 	\end{itemize}
 \end{frame}

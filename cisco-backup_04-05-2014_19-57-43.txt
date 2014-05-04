@@ -1,0 +1,44 @@
+ 
+R2#sh run
+!
+!
+hostname R2
+!
+aaa new-model
+!
+!
+aaa authentication login VTY enable
+!
+!
+username cong password 0 123
+archive
+ log config
+  hidekeys
+
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ ip address 10.10.10.2 255.255.255.0
+ duplex auto
+ speed auto
+!
+
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+!
+line vty 0 4
+ privilege level 15
+ password cisco
+ login authentication vty
+!
+!
+end
+
+R2#exit

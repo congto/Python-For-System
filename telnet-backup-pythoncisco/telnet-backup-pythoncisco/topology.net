@@ -1,0 +1,32 @@
+autostart = False
+version = 0.8.6
+[127.0.0.1:7200]
+    workingdir = C:\Program Files\GNS3
+    udp = 10001
+    [[3725]]
+        image = F:\CCNA&MCSA\IOS CISCO\c3725-adventerprisek9-mz.124-15.T7.image
+        ram = 128
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R2]]
+        model = 3725
+        console = 2103
+        aux = 2503
+        cnfg = configs\R2.cfg
+        f0/1 = nio_gen_eth:\device\npf_{5a59aba9-61bf-4fc8-9e8d-8addd18edf65}
+        x = -41.0
+        y = -57.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[Cloud C2]]
+        symbol = Host
+        x = -193.5
+        y = -10.5
+        z = 1.0
+    [[Cloud C4]]
+        x = 76.5
+        y = -8.0
+        z = 1.0
+        connections = R2:f0/1:nio_gen_eth:\device\npf_{5a59aba9-61bf-4fc8-9e8d-8addd18edf65}
