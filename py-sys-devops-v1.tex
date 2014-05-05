@@ -134,7 +134,7 @@ Tương lai: \Large{\textcolor{red}{\textbf{{OpenStack ... OpenStack ... OpenSta
 \label{Khi toi noi}
 \begin{frame}{2. Khi bạn nói ... mọi người nghĩ ...}
 \large{System Administrator / Network Administrator / System Monitor \\
-Programmer / PM (Project Manager) / Tester / QA (Quality Assurance)  \\
+Programmer / Developer  / Tester / QA (Quality Assurance)  \\
 \textbf{DevOps ....}} \\ 
 \framebreak
 \pause
@@ -169,7 +169,7 @@ Programmer / PM (Project Manager) / Tester / QA (Quality Assurance)  \\
 \label{Slide 1:Python cho Sysad - module os}
 \begin{frame}[fragile]
 \frametitle{4. Python cho System / Network / (1) }
-import os, socket, subprocess \color{gray} $\{$...more...$\}$
+import os, socket, subprocess, telnetlib \color{gray} $\{$...more...$\}$
 \label{import os}
 \begin{block}{ipmort os}
 \sFontvi
@@ -398,6 +398,7 @@ http://ipython.org/documentation.html
 \label{Slide xxx: cai dat va su dung ipython}
 \begin{frame}[fragile]
 \frametitle{4. Python cho System / Network / (2)}
+\begin{block}{Cài đặt và sử dung Ipython}
 Cài đặt:
 \pause
 \begin{itemize}
@@ -413,6 +414,7 @@ Cách sử dụng:
 \item Sử dụng lệnh của hệ thống : \textcolor{red}{!ping 8.8.8.8}\pause
 \item Thực thi chương trình: \textcolor{red}{@run /home/congtt/vidu-ipython.py}
 \end{itemize}
+\end{block}
 \end{frame}
 %-------Gioi thieu ve fabric---------------------%
 \label{Slide xxx:Python cho Sysad - fabric}
@@ -440,10 +442,25 @@ https://github.com/fabric/fabric\\
 http://fabfile.org/
 \end{frame}
 %------Vi du su dung-----------------------------%
-\label{Vi du su dung fabric}
+\label{Cac chu y trong Python}
+\begin{frame}[fragile]
+\frametitle{Các function cơ bản}
+\begin{block}{Các API trong Fabric}
+\begin{itemize}
+\item run (fabric.operations.run)
+\item sudo (fabric.operations.sudo)
+\item local (fabric.operations.local)
+\item get (fabric.operations.get)
+\item put (fabric.operations.put)
+\item prompt (fabric.operations.prompt)
+\item reboot (fabric.operations.reboot)
+\end{itemize}
+\end{block}
+\end{frame}
+%--------------------------------------------------%
 \begin{frame}[fragile]
 \frametitle{Ví dụ sử dụng fabric}
-\sFontvi
+\Fontvi
 \begin{block}{Ví dụ 1:}
 Dùng trình soạn thảo tạo mã nguồn dưới và đặt tên là fabfile.py
 \pythonexternal{fabfile.py}

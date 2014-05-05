@@ -21,8 +21,7 @@ tn.write("sh run"+"\n")
 tn.write("exit"+"\n")
 output=tn.read_all()
 
-filename = "%s_%.2i-%.2i-%i_%.2i-%.2i-%.2i.txt" % #Khong xuong dong cho nay
-(filename_prefix,now.day,now.month,now.year,now.hour,now.minute,now.second)
+filename = "%s_%.2i-%.2i-%i_%.2i-%.2i-%.2i.txt" % (filename_prefix,now.day,now.month,now.year,now.hour,now.minute,now.second)
 
 fp=open(filename,"w")
 fp.write(output)

@@ -4,7 +4,7 @@ R2#terminal length 0
 R2#sh run
 Building configuration...
 
-Current configuration : 1069 bytes
+Current configuration : 1046 bytes
 !
 version 12.4
 service timestamps debug datetime msec
@@ -35,7 +35,27 @@ ip cef
 no ip domain lookup
 !
 multilink bundle-name authenticated
-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
 username cong password 0 123
 archive
  log config
@@ -50,7 +70,7 @@ ip tcp synwait-time 5
 !
 !
 interface FastEthernet0/0
- ip address 172.16.1.10 255.255.255.0
+ no ip address
  duplex auto
  speed auto
 !

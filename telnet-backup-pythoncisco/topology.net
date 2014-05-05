@@ -8,7 +8,6 @@ version = 0.8.6
         ram = 128
         idlepc = 0x60264f28
         sparsemem = True
-        ghostios = True
     [[ROUTER R2]]
         model = 3725
         console = 2103
@@ -20,13 +19,13 @@ version = 0.8.6
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    [[Cloud C2]]
-        symbol = Host
-        x = -193.5
-        y = -10.5
-        z = 1.0
     [[Cloud C4]]
         x = 76.5
         y = -8.0
         z = 1.0
         connections = R2:f0/1:nio_gen_eth:\device\npf_{5a59aba9-61bf-4fc8-9e8d-8addd18edf65}
+    [[Cloud C2]]
+        symbol = Host
+        x = -193.5
+        y = -10.5
+        z = 1.0
